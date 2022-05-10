@@ -1,0 +1,54 @@
+﻿@model List<ChivoFlixWeb.Models.Usuarios>
+@{
+    ViewBag.Title = "Usuarios";
+}
+
+<h2>Usuarios</h2>
+<div class="row right">
+    <a href="~/Usuarios/NuevoUsuario" class="btn btn-primary">Nuevo</a>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Email</th>
+                    <th>Perfiles</th>
+                    <th>Rol</th>
+                    <th>Plan</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.IdUsuarios</td>
+                            <td>@item.Username</td>
+                            <td>@item.Email</td>
+                            <td>@item.Perfiles</td>
+                            <td>@item.IdRol</td>
+                            <td>@item.IdPlanes</td>
+                            <td>
+                                <a href="~/Usuarios/EditarUsuario/@item.IdUsuarios" class="btn">Editar</a>
+                                <a href="~/Usuarios/EliminarUsuario/@item.IdUsuarios" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <th scope="row">No hay registros</th>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
