@@ -7,7 +7,7 @@
 <div class="row right">
     <a href="~/Usuarios/NuevoUsuario" class="btn btn-primary">Nuevo</a>
 </div>
-
+<br />
 <div class="row">
     <div class="col-md-12">
         <table class="table">
@@ -19,7 +19,8 @@
                     <th>Perfiles</th>
                     <th>Rol</th>
                     <th>Plan</th>
-                    <th>Acciones</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,8 +36,10 @@
                             <td>@item.IdRol</td>
                             <td>@item.IdPlanes</td>
                             <td>
-                                <a href="~/Usuarios/EditarUsuario/@item.IdUsuarios" class="btn">Editar</a>
-                                <a href="~/Usuarios/EliminarUsuario/@item.IdUsuarios" class="btn btn-danger">Eliminar</a>
+                                <a href="~/Usuarios/EditarUsuario/@item.IdUsuarios" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
+                            </td>
+                            <td>
+                                <a href="~/Usuarios/EliminarUsuario/@item.IdUsuarios" class="btn btn-danger"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                     }
