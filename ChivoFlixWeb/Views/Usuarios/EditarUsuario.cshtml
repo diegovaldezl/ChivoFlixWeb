@@ -3,13 +3,14 @@
     ViewBag.Title = "Editar Usuario";
 }
 
-<h2>Nuevo usuario</h2>
+<h2>Editar usuario</h2>
 
 @using (Html.BeginForm("EditarUsuario", "Usuarios", FormMethod.Post))
 {
     <div class="row">
         <div class="col-md-12">
-            @Html.HiddenFor(d=>d.IdUsuarios)
+            @Html.LabelFor(d => d.IdUsuarios)
+            @Html.TextBoxFor(d => d.IdUsuarios, "", new { @class = "form-control", @readonly = "readonly" })
             <div>
                 @Html.LabelFor(d => d.Username)
                 @Html.TextBoxFor(d => d.Username, "", new { @class = "form-control" })

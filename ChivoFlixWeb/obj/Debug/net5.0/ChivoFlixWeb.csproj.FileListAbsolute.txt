@@ -190,4 +190,4 @@ C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Sys
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\WebGrease.dll
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Usuarios\EditarUsuario.cshtml.g.cs
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Usuarios\Usuarios.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Usuarios\Listado.cshtml.g.cs

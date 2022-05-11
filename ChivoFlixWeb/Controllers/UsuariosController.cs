@@ -11,7 +11,7 @@ namespace ChivoFlixWeb.Controllers
 {
     public class UsuariosController : Controller
     {
-        public IActionResult Usuarios()
+        public IActionResult Listado()
         {
             List<Usuarios> listUsuarios;
             using(CHIVOFLIXContext db = new())
@@ -56,7 +56,7 @@ namespace ChivoFlixWeb.Controllers
                     };
                     db.Usuarios.Add(oUsuario);
                     db.SaveChanges();
-                    return Redirect("~/Usuarios/Usuarios");
+                    return Redirect("~/Usuarios/Listado/");
                 }
                 return View(model);
             }
@@ -72,6 +72,7 @@ namespace ChivoFlixWeb.Controllers
             using(CHIVOFLIXContext db = new())
             {
                 var oUsuario = db.Usuarios.Find(id);
+                model.IdUsuarios = oUsuario.IdUsuarios;
                 model.Username = oUsuario.Username;
                 model.Email = oUsuario.Email;
                 model.Password = oUsuario.Password;
@@ -100,7 +101,7 @@ namespace ChivoFlixWeb.Controllers
                         db.SaveChanges();
                     };
 
-                    return Redirect("~/Usuarios/Usuarios");
+                    return Redirect("~/Usuarios/Listado");
                 }
                 return View(model);
             }
@@ -119,7 +120,7 @@ namespace ChivoFlixWeb.Controllers
                 db.Usuarios.Remove(oUsuario);
                 db.SaveChanges();
             }
-            return Redirect("~/Usuarios/Usuarios");
+            return Redirect("~/Usuarios/Listado");
         }
     }
 }
