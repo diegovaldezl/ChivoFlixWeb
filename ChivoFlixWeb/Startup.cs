@@ -24,11 +24,8 @@ namespace ChivoFlixWeb
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
-            //string connection = Configuration["ConnectionStrings:SQLChivo"];
-            //services.AddDbContext<CHIVOFLIXContext>(options =>
-            //{
-            //    options.UseSqlServer(connection);
-            //});
+
+            services.AddDbContext<CHIVOFLIXContext>(option => option.UseSqlServer(Configuration.GetConnectionString("SQLChivo")));
 
             //services.AddDistributedMemoryCache();
             //services.AddSession(options =>
