@@ -1,0 +1,45 @@
+﻿@model ChivoFlixWeb.Models.ViewModels.UsuarioVM
+@{
+    ViewBag.Title = "Editar Usuario";
+}
+
+<h2>Ver usuario @Html.LabelFor(d => d.Username)</h2>
+
+@using (Html.BeginForm("EditarUsuario", "Usuarios", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-12">
+            @Html.LabelFor(d => d.IdUsuarios)
+            @Html.TextBoxFor(d => d.IdUsuarios, "", new { @class = "form-control", @readonly = "readonly" })
+            <div>
+                @Html.LabelFor(d => d.Username)
+                @Html.TextBoxFor(d => d.Username, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Username, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Email)
+                @Html.TextBoxFor(d => d.Email, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Email, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Password)
+                @Html.TextBoxFor(d => d.Password, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Password, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.ConfirmPassword)
+                @Html.TextBoxFor(d => d.ConfirmPassword, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.ConfirmPassword, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Imagen)
+                @Html.TextBoxFor(d => d.Imagen, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Imagen, null, new { @class = "text-danger" })
+            </div>
+            <br />
+            <div class="col-md-1">
+                <a href="~/Usuarios/Listado" class="btn btn-success">Regresar</a>
+            </div>
+        </div>
+    </div>
+}

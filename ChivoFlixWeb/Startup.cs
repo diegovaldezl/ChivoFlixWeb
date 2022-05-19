@@ -1,15 +1,12 @@
 using ChivoFlixWeb.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Session;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ChivoFlixWeb
 {
@@ -26,11 +23,18 @@ namespace ChivoFlixWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            string connection = Configuration["ConnectionStrings:SQLChivo"];
-            services.AddDbContext<CHIVOFLIXContext>(options =>
-            {
-                options.UseSqlServer(connection);
-            });
+            services.AddRazorPages();
+            //string connection = Configuration["ConnectionStrings:SQLChivo"];
+            //services.AddDbContext<CHIVOFLIXContext>(options =>
+            //{
+            //    options.UseSqlServer(connection);
+            //});
+
+            //services.AddDistributedMemoryCache();
+            //services.AddSession(options =>
+            //{
+            //    options.IdleTimeout = TimeSpan.FromMinutes(5);
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +55,8 @@ namespace ChivoFlixWeb
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -58,6 +64,7 @@ namespace ChivoFlixWeb
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

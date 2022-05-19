@@ -8,9 +8,11 @@
 @using (Html.BeginForm("EditarUsuario", "Usuarios", FormMethod.Post))
 {
     <div class="row">
-        <div class="col-md-12">
-            @Html.LabelFor(d => d.IdUsuarios)
-            @Html.TextBoxFor(d => d.IdUsuarios, "", new { @class = "form-control", @readonly = "readonly" })
+        <div class="col-md-6">
+            <div>
+                @Html.LabelFor(d => d.IdUsuarios)
+                @Html.TextBoxFor(d => d.IdUsuarios, "", new { @class = "form-control", @readonly = "readonly" })
+            </div>
             <div>
                 @Html.LabelFor(d => d.Username)
                 @Html.TextBoxFor(d => d.Username, "", new { @class = "form-control" })
@@ -18,9 +20,11 @@
             </div>
             <div>
                 @Html.LabelFor(d => d.Email)
-                @Html.TextBoxFor(d => d.Email, "", new { @class = "form-control" }))
+                @Html.TextBoxFor(d => d.Email, "", new { @class = "form-control" })
                 @Html.ValidationMessageFor(d => d.Email, null, new { @class = "text-danger" })
             </div>
+        </div>
+        <div class="col-md-6">
             <div>
                 @Html.LabelFor(d => d.Password)
                 @Html.TextBoxFor(d => d.Password, "", new { @class = "form-control" })
@@ -36,9 +40,16 @@
                 @Html.TextBoxFor(d => d.Imagen, "", new { @class = "form-control" })
                 @Html.ValidationMessageFor(d => d.Imagen, null, new { @class = "text-danger" })
             </div>
-            <div>
-                <input value="Guardar" class="btn btn-primary" type="submit" />
-            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+            <input value="Guardar" class="btn btn-primary" type="submit" />
+
+            <a href="/Usuarios/Listado" class="btn btn-success">Regresar</a>
         </div>
     </div>
 }

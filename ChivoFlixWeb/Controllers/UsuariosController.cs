@@ -1,5 +1,6 @@
 ﻿using ChivoFlixWeb.Models;
 using ChivoFlixWeb.Models.ViewModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,6 +14,8 @@ namespace ChivoFlixWeb.Controllers
     {
         public IActionResult Listado()
         {
+           // HttpContext.Session.GetString("String");
+
             List<Usuarios> listUsuarios;
             using(CHIVOFLIXContext db = new())
             {
@@ -121,6 +124,21 @@ namespace ChivoFlixWeb.Controllers
                 db.SaveChanges();
             }
             return Redirect("~/Usuarios/Listado");
+        }
+        [HttpGet]
+        public IActionResult VerUsuario(int id)
+        {
+            UsuarioVM model = new();
+            using (CHIVOFLIXContext db = new())
+            {
+                var oUsuario = db.Usuarios.Find(id);
+                model.IdUsuarios = oUsuario.IdUsuarios;
+                model.Username = oUsuario.Username;
+                model.Email = oUsuario.Email;
+                model.Password = oUsuario.Password;
+                model.Imagen = oUsuario.Imagen;
+            }
+            return View(model);
         }
     }
 }
