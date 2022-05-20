@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {}
+    "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {
+    "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+        "projectUniqueName": "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
         "projectName": "ChivoFlixWeb",
-        "projectPath": "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
-        "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
+        "projectPath": "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+        "packagesPath": "C:\\Users\\Desarrollo 02\\.nuget\\packages\\",
+        "outputPath": "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Desarrollo 02\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,6 +61,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
