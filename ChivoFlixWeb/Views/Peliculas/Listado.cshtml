@@ -5,7 +5,7 @@
 
 <h2>Listado de Peliculas</h2>
 <div class="row right">
-    <a href="~/Usuarios/NuevoUsuario" class="btn btn-primary col-md-1 card-text-center">Nuevo</a>
+    <a href="~/Peliculas/NuevaPelicula" class="btn btn-primary col-md-1 card-text-center">Nueva Pelicula</a>
 </div>
 <br />
 <div class="row">
@@ -19,7 +19,6 @@
                     <th>Genero</th>
                     <th>Calidad</th>
                     <th>Categoria</th>
-                    <th>Ver</th>
                     <th>Editar</th>
                     <th>Borrar</th>
                 </tr>
@@ -37,13 +36,10 @@
                             <td>@item.Calidad</td>
                             <td>@item.CategoriaEdad</td>
                             <td>
-                                <a href="~/Usuarios/VerUsuario/@item.IdPeliculas" class="btn btn-success"><i class="bi bi-eye"></i></a>
+                                <a href="~/Peliculas/EditarPelicula/@item.IdPeliculas" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
                             </td>
                             <td>
-                                <a href="~/Usuarios/EditarUsuario/@item.IdPeliculas" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
-                            </td>
-                            <td>
-                                <a href="~/Usuarios/EliminarUsuario/@item.IdPeliculas" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                                <a href="~/Peliculas/EliminarPelicula/@item.IdPeliculas" class="btn btn-danger"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                     }

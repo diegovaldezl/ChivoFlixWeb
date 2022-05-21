@@ -86,6 +86,7 @@ namespace ChivoFlixWeb.Controllers
 
             return View(model);
         }
+
         [HttpPost]
         public IActionResult EditarUsuario(UsuarioVM model)
         {

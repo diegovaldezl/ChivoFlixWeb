@@ -7475,19 +7475,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Desarrollo 02\\.nuget\\packages\\": {}
+    "C:\\Users\\Daniel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+      "projectUniqueName": "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
       "projectName": "ChivoFlixWeb",
-      "projectPath": "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
-      "packagesPath": "C:\\Users\\Desarrollo 02\\.nuget\\packages\\",
-      "outputPath": "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
+      "projectPath": "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+      "outputPath": "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Desarrollo 02\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7558,7 +7558,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }
