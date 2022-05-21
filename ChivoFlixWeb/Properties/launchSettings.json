@@ -2,13 +2,9 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
-    "iis": {
-      "applicationUrl": "http://localhost/ChivoFlixWeb",
-      "sslPort": 0
-    },
     "iisExpress": {
       "applicationUrl": "http://localhost:20966",
-      "sslPort": 44330
+      "sslPort": 0
     }
   },
   "profiles": {
@@ -20,7 +16,7 @@
       }
     },
     "ChivoFlixWeb": {
-      "commandName": "IIS",
+      "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

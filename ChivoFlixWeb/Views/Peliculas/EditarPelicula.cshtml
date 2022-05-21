@@ -1,0 +1,73 @@
+﻿@model ChivoFlixWeb.Models.ViewModels.PeliculaVM
+@{
+    ViewBag.Title = "Editar Pelicula";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+}
+
+<h2>Nueva Pelicula</h2>
+
+@using (Html.BeginForm("EditarPelicula", "Peliculas", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                @Html.LabelFor(d => d.IdPeliculas)
+                @Html.TextBoxFor(d => d.IdPeliculas, "", new { @class = "form-control", @readonly = "readonly" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.nombre)
+                @Html.TextBoxFor(d => d.nombre, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.nombre, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.descripcion)
+                @Html.TextBoxFor(d => d.descripcion, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.descripcion, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.anioEstreno)
+                @Html.TextBoxFor(d => d.anioEstreno, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.anioEstreno, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.categoriaEdad)
+                @Html.TextBoxFor(d => d.categoriaEdad, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.categoriaEdad, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.calidad)
+                @Html.TextBoxFor(d => d.calidad, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.calidad, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.director)
+                @Html.TextBoxFor(d => d.director, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.director, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.banner)
+                @Html.TextBoxFor(d => d.banner, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.banner, null, new { @class = "text-danger" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.idGeneros)
+                @Html.DropDownListFor(d => d.idGeneros, items, "Seleccione...", new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Pelicula)
+                @Html.TextBoxFor(d => d.Pelicula, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Pelicula, null, new { @class = "text-danger" })
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                    <input value="Guardar" class="btn btn-primary" type="submit" />
+
+                    <a href="/Peliculas/Listado" class="btn btn-success">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
