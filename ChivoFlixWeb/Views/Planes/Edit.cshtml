@@ -1,0 +1,53 @@
+﻿@model ChivoFlixWeb.Models.Planes
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar Planes</h1>
+
+<hr />
+<div class="row">
+    
+    <form asp-action="Edit">
+        
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdPlanes" />
+    
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Plann" class="control-label">Plan</label>
+                <input asp-for="Plann" class="form-control" />
+                <span asp-validation-for="Plann" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioPlan" class="control-label">Precio</label>
+                <input asp-for="PrecioPlan" class="form-control" />
+                <span asp-validation-for="PrecioPlan" class="text-danger"></span>
+            </div>
+  
+            <div class="form-group">
+                <label asp-for="IdDuracionPlanes" class="control-label">Duracion de plan</label>
+                <select asp-for="IdDuracionPlanes" class="form-control" asp-items="ViewBag.IdDuracionPlanes"></select>
+                <span asp-validation-for="IdDuracionPlanes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdUsuarios" class="control-label">Usuario que registro</label>
+                <select asp-for="IdUsuarios" class="form-control" asp-items="ViewBag.IdUsuarios"></select>
+                <span asp-validation-for="IdUsuarios" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-success">Regresar a la lista</a>
+            </div>
+        
+    </div>
+    </form>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
