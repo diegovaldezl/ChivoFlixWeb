@@ -198,14 +198,6 @@ C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ref
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.pdb
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.genruntimeconfig.cache
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.csproj.AssemblyReference.cache
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 D:\Daniel\Flutter Proyectos\repositorio\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.csproj.AssemblyReference.cache
 D:\Daniel\Flutter Proyectos\repositorio\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.GeneratedMSBuildEditorConfig.editorconfig
 D:\Daniel\Flutter Proyectos\repositorio\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.AssemblyInfoInputs.cache
@@ -367,3 +359,5 @@ D:\Daniel\Flutter Proyectos\repositorio\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5
 D:\Daniel\Flutter Proyectos\repositorio\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.csproj.CopyComplete
 D:\Daniel\Flutter Proyectos\repositorio\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.genruntimeconfig.cache
 D:\Daniel\Flutter Proyectos\repositorio\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Peliculas\Listado.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Peliculas\Listado.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs

@@ -14,7 +14,7 @@ namespace ChivoFlixWeb.Models.ViewModels
             Listados = new HashSet<Listados>();
             Planes = new HashSet<Planes>();
         }
-
+        [Key]
         public int IdUsuarios { get; set; }
 
         [Required(ErrorMessage ="El usuario es requerido!")]
