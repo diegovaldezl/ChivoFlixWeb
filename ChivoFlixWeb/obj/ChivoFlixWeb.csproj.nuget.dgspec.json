@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {}
+    "C:\\Users\\ivanw\\Desktop\\proyecto flutter chivoflix\\proyecto_chivoflixweb .net\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {}
   },
   "projects": {
-    "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {
+    "C:\\Users\\ivanw\\Desktop\\proyecto flutter chivoflix\\proyecto_chivoflixweb .net\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+        "projectUniqueName": "C:\\Users\\ivanw\\Desktop\\proyecto flutter chivoflix\\proyecto_chivoflixweb .net\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
         "projectName": "ChivoFlixWeb",
-        "projectPath": "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
-        "packagesPath": "C:\\Users\\Desarrollo 02\\.nuget\\packages\\",
-        "outputPath": "D:\\Daniel\\Flutter Proyectos\\repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
+        "projectPath": "C:\\Users\\ivanw\\Desktop\\proyecto flutter chivoflix\\proyecto_chivoflixweb .net\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+        "packagesPath": "C:\\Users\\ivanw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivanw\\Desktop\\proyecto flutter chivoflix\\proyecto_chivoflixweb .net\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "G:\\programas ryzen\\VisualStudio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Desarrollo 02\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ivanw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,13 +54,13 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -85,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
