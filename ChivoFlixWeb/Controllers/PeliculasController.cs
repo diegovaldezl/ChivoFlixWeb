@@ -1,6 +1,7 @@
 ﻿using ChivoFlixWeb.Models;
 using ChivoFlixWeb.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace ChivoFlixWeb.Controllers
     public class PeliculasController : Controller
     {
         private readonly CHIVOFLIXContext _context;
-
+        int id = 0;
         public PeliculasController(CHIVOFLIXContext context)
         {
             _context = context;
@@ -39,6 +40,26 @@ namespace ChivoFlixWeb.Controllers
 
         public IActionResult NuevaPelicula()
         {
+            List<Generos> listadoGeneros = null;
+
+            listadoGeneros = (from g in _context.Generos
+                              select new Generos()
+                              {
+                                  IdGeneros = g.IdGeneros,
+                                  Nombre = g.Nombre
+                              }).ToList();
+
+            List<SelectListItem> items = listadoGeneros.ConvertAll(g =>
+           {
+               return new SelectListItem()
+               {
+                   Text = g.Nombre.ToString(),
+                   Value = g.IdGeneros.ToString(),
+                   Selected = false,
+               };
+           });
+
+            ViewBag.items = items;
             return View();
         }
         [HttpPost]
@@ -75,6 +96,28 @@ namespace ChivoFlixWeb.Controllers
 
         public IActionResult EditarPelicula(int id)
         {
+
+            List<Generos> listadoGeneros = null;
+
+            listadoGeneros = (from g in _context.Generos
+                              select new Generos()
+                              {
+                                  IdGeneros = g.IdGeneros,
+                                  Nombre = g.Nombre
+                              }).ToList();
+
+            List<SelectListItem> items = listadoGeneros.ConvertAll(g =>
+            {
+                return new SelectListItem()
+                {
+                    Text = g.Nombre.ToString(),
+                    Value = g.IdGeneros.ToString(),
+                    Selected = false,
+                };
+            });
+
+            ViewBag.items = items;
+
             PeliculaVM model = new();
             var peliculas = _context.Peliculas.Find(id);
             model.IdPeliculas = peliculas.IdPeliculas;

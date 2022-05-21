@@ -1,6 +1,7 @@
 ﻿@model ChivoFlixWeb.Models.ViewModels.PeliculaVM
 @{
     ViewBag.Title = "Nueva Pelicula";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
 }
 
 <h2>Nueva Pelicula</h2>
@@ -46,8 +47,7 @@
             </div>
             <div>
                 @Html.LabelFor(d => d.idGeneros)
-                @Html.TextBoxFor(d => d.idGeneros, "", new { @class = "form-control" })
-                @Html.ValidationMessageFor(d => d.idGeneros, null, new { @class = "text-danger" })
+                @Html.DropDownListFor(d => d.idGeneros, items, "Seleccione...", new { @class = "form-control" })
             </div>
             <div>
                 @Html.LabelFor(d => d.Pelicula)
