@@ -13,7 +13,6 @@ namespace ChivoFlixWeb.Controllers
     public class PeliculasController : Controller
     {
         private readonly CHIVOFLIXContext _context;
-        int id = 0;
         public PeliculasController(CHIVOFLIXContext context)
         {
             _context = context;
@@ -22,19 +21,19 @@ namespace ChivoFlixWeb.Controllers
         {
             List<Peliculas> listPeliculas;
             listPeliculas = (from pelicula in _context.Peliculas
-                            select new Peliculas
-                            {
-                                IdPeliculas = pelicula.IdPeliculas,
-                                Nombre = pelicula.Nombre,
-                                AnioEstreno = pelicula.AnioEstreno,
-                                CategoriaEdad = pelicula.CategoriaEdad,
-                                Descripcion = pelicula.Descripcion,
-                                Calidad = pelicula.Calidad,
-                                Director = pelicula.Director,
-                                Banner = pelicula.Banner,
-                                IdGeneros = pelicula.IdGeneros,
-                                Pelicula1 = pelicula.Pelicula1
-                            }).ToList();
+                             select new Peliculas
+                             {
+                                 IdPeliculas = pelicula.IdPeliculas,
+                                 Nombre = pelicula.Nombre,
+                                 AnioEstreno = pelicula.AnioEstreno,
+                                 CategoriaEdad = pelicula.CategoriaEdad,
+                                 Descripcion = pelicula.Descripcion,
+                                 Calidad = pelicula.Calidad,
+                                 Director = pelicula.Director,
+                                 Banner = pelicula.Banner,
+                                 IdGeneros = pelicula.IdGeneros,
+                                 Pelicula1 = pelicula.Pelicula1
+                             }).ToList();
             return View(listPeliculas);
         }
 
@@ -138,27 +137,27 @@ namespace ChivoFlixWeb.Controllers
         public IActionResult EditarPelicula(PeliculaVM model)
         {
             var db = _context;
-            
-                if (ModelState.IsValid)
-                {
-                    var peliculas = db.Peliculas.Find(model.IdPeliculas);
-                    peliculas.Nombre = model.nombre;
-                    peliculas.AnioEstreno = model.anioEstreno;
-                    peliculas.CategoriaEdad = model.categoriaEdad;
-                    peliculas.Descripcion = model.descripcion;
-                    peliculas.Calidad = model.calidad;
-                    peliculas.Director = model.director;
-                    peliculas.Banner = model.banner;
-                    peliculas.IdGeneros = model.idGeneros;
-                    peliculas.Pelicula1 = model.Pelicula;
 
-                    db.Entry(peliculas).State = EntityState.Modified;
-                    db.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                var peliculas = db.Peliculas.Find(model.IdPeliculas);
+                peliculas.Nombre = model.nombre;
+                peliculas.AnioEstreno = model.anioEstreno;
+                peliculas.CategoriaEdad = model.categoriaEdad;
+                peliculas.Descripcion = model.descripcion;
+                peliculas.Calidad = model.calidad;
+                peliculas.Director = model.director;
+                peliculas.Banner = model.banner;
+                peliculas.IdGeneros = model.idGeneros;
+                peliculas.Pelicula1 = model.Pelicula;
 
-                    return Redirect("~/Peliculas/Listado");
-                }
-                return View(model);
-            
+                db.Entry(peliculas).State = EntityState.Modified;
+                db.SaveChanges();
+
+                return Redirect("~/Peliculas/Listado");
+            }
+            return View(model);
+
         }
 
         [HttpGet]
