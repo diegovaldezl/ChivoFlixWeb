@@ -31,6 +31,9 @@ namespace ChivoFlixWeb.Models.ViewModels
 
         public string calidad { get; set; }
 
+        [Required(ErrorMessage = "El director es requerido!")]
+        [StringLength(maximumLength:20, ErrorMessage = "No puede exceder de 20 caracteres", MinimumLength = 5)]
+        [Display(Name = "Ingrese el director")]
         public string director { get; set; }
 
         public string banner { get; set; }
@@ -42,6 +45,6 @@ namespace ChivoFlixWeb.Models.ViewModels
         public string Pelicula { get; set; }
 
 
-        public virtual Generos IdGeneros { get; set; }
+        public virtual Generos IdGenerosNavigation { get; set; }
     }
 }
