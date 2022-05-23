@@ -53,6 +53,12 @@ namespace ChivoFlixWeb.Controllers
             ViewBag.items = items;
             return View();
         }
+
+        public IActionResult NuevaCategoria()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult NuevaCategoria(GenerosVM model)
         {
@@ -64,7 +70,7 @@ namespace ChivoFlixWeb.Controllers
                     var oGeneros = new Generos
                     {
                         IdGeneros = model.IdGeneros,
-                        Nombre = model.Nombre,
+                        Nombre = model.Nombre
                        
                        
                     };

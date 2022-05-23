@@ -1,12 +1,12 @@
 ﻿@model ChivoFlixWeb.Models.ViewModels.GenerosVM
 @{
-    ViewBag.Title = "Nueva Categoria";
+    ViewBag.Title = "NuevaCategoria";
     List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
 }
 
 <h2>Nueva Categoria</h2>
 
-@using (Html.BeginForm("NuevaCategoria", "Categorias", FormMethod.Post))
+@using (Html.BeginForm("NuevaCategoria","Categorias",FormMethod.Post))
 {
     <div class="row">
         <div class="col-md-12">
