@@ -86,5 +86,42 @@ namespace ChivoFlixWeb.Controllers
             }
         }
 
+
+        public IActionResult EditarCategoria(int id)
+        {
+            GenerosVM model = new();
+            var oGenero = _context.Generos.Find(id);
+            model.IdGeneros = oGenero.IdGeneros;
+            model.Nombre = oGenero.Nombre;
+            
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult EditarCategoria(GenerosVM model)
+        {
+            var db = _context;
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var oGenero = db.Generos.Find(model.IdGeneros);
+                    oGenero.Nombre = model.Nombre;
+                   
+                   
+
+                    db.Entry(oGenero).State = EntityState.Modified;
+                    db.SaveChanges();
+
+                    return Redirect("~/Categorias/Listado");
+                }
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

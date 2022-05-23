@@ -721,3 +721,4 @@ D:\RepositoriosGit\parcial03\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFli
 D:\RepositoriosGit\parcial03\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Categorias\Index.cshtml.g.cs
 D:\RepositoriosGit\parcial03\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Categorias\Listado.cshtml.g.cs
 D:\RepositoriosGit\parcial03\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Categorias\NuevaCategoria.cshtml.g.cs
+D:\RepositoriosGit\parcial03\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Categorias\EditarCategoria.cshtml.g.cs
