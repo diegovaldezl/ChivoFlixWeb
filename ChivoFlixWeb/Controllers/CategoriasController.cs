@@ -123,5 +123,18 @@ namespace ChivoFlixWeb.Controllers
                 throw new Exception(ex.Message);
             }
         }
+
+        [HttpGet]
+        public IActionResult EliminarCategoria(int id)
+        {
+            var db = _context;
+            using (db)
+            {
+                var genero = db.Generos.Find(id);
+                db.Generos.Remove(genero);
+                db.SaveChanges();
+            }
+            return Redirect("~/Categorias/Listado");
+        }
     }
 }
