@@ -83,6 +83,7 @@ namespace ChivoFlixWeb.Controllers
                     };
                     db.Peliculas.Add(oPeliculas);
                     db.SaveChanges();
+                    TempData["notification"] = "<script language='javascript'>Swal.fire({icon: 'success',title: 'Hecho',text: 'Pelicula agregada correctamente!',})</script>";
                     return Redirect("~/Peliculas/Listado/");
                 }
                 return View(model);
@@ -153,7 +154,7 @@ namespace ChivoFlixWeb.Controllers
 
                 db.Entry(peliculas).State = EntityState.Modified;
                 db.SaveChanges();
-
+                TempData["notification"] = "<script language='javascript'>Swal.fire({icon: 'success',title: 'Hecho',text: 'Pelicula Editada!',})</script>";
                 return Redirect("~/Peliculas/Listado");
             }
             return View(model);
@@ -170,6 +171,7 @@ namespace ChivoFlixWeb.Controllers
                 db.Peliculas.Remove(peliculas);
                 db.SaveChanges();
             }
+            TempData["notification"] = "<script language='javascript'>Swal.fire({icon: 'error',title: 'Hecho',text: 'Pelicula Eliminada!',})</script>";
             return Redirect("~/Peliculas/Listado");
         }
     }

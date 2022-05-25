@@ -15,14 +15,26 @@ namespace ChivoFlixWeb.Controllers
         {
             _contex = contex;
         }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
         public IActionResult Login(string username, string password)
         {
             if(_contex.Usuarios.Where(x=>x.Username == username && x.Password == password && x.IdRol == 1).Any())
             {
-                //HttpContext.Session.SetString("username", username);
+                HttpContext.Session.SetString("username", username);
                 return RedirectToAction("Index", "Home");
             }
+            TempData["notification"] = "<script language='javascript'>Swal.fire({icon: 'warning',title: 'Error',text: 'Credenciales incorrectas!',})</script>";
             return View();
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            HttpContext.Session.Remove("username");
+            return RedirectToAction("Login", "Account");
         }
     }
 }
