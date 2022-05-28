@@ -24,7 +24,7 @@ namespace ChivoFlixWeb.Models
         public int? Perfiles { get; set; }
         public string Imagen { get; set; }
         public int? IdRol { get; set; }
-        public int? IdPlanes { get; set; }
+        public int IdPlanes { get; set; }
 
         [Display(Name = "Plan")]
         public Planes IdPlanesNavigation { get; set; }

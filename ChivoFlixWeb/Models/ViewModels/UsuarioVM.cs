@@ -49,8 +49,10 @@ namespace ChivoFlixWeb.Models.ViewModels
         [Display(Name = "Rol")]
         public int? IdRol { get; set; }
 
-        [Display(Name = "Plan")]
-        public int? IdPlanes { get; set; }
+
+        [Required(ErrorMessage = "Seleccione un plan!")]
+        [Display(Name = "Seleccione un plan")]
+        public int IdPlanes { get; set; }
 
         public virtual Planes IdPlanesNavigation { get; set; }
         public virtual Roles IdRolNavigation { get; set; }

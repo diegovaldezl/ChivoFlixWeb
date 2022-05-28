@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {}
+    "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {
+    "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+        "projectUniqueName": "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
         "projectName": "ChivoFlixWeb",
-        "projectPath": "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
-        "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
+        "projectPath": "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+        "outputPath": "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.8, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.16, )"
@@ -89,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
