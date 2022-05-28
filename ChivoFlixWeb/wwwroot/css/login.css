@@ -1,7 +1,7 @@
 ﻿body {
     margin: 0;
     padding: 0;
-    background: url(https://i.imgur.com/dRntu4D.png) no-repeat;
+    background: url(/img/fondo.png) no-repeat;
     height: 100vh;
     font-family: sans-serif;
     background-size: cover;
