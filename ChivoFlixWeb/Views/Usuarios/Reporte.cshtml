@@ -1,0 +1,82 @@
+﻿@model IEnumerable<ChivoFlixWeb.Models.Usuarios>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reporte</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChivoFlixWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="text-center">
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="4"><img src="~/img/chivoflix.png" style="height:90%" /></td>
+                    <td colspan="2" class="text-right"><img src="~/img/logoutec.png" style="width:60%; height:30%" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div class="col-md-12">
+            <h3 class="font-weight-bold">Reporte Usuarios</h3>
+        </div>
+        <hr />
+        <div class="col-md-12">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Username)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Perfiles)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IdPlanesNavigation)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IdRolNavigation)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Username)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Perfiles)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IdPlanesNavigation.Plann)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IdRolNavigation.Rol)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

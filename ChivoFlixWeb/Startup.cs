@@ -65,6 +65,7 @@ namespace ChivoFlixWeb
                     pattern: "{controller=Account}/{action=Login}/{id?}");
                 endpoints.MapRazorPages();
             });
+            Rotativa.AspNetCore.RotativaConfiguration.Setup(env.WebRootPath, "../Reportes");
         }
     }
 }

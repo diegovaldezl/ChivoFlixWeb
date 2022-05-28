@@ -541,6 +541,13 @@ C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Chi
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ref\ChivoFlixWeb.dll
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.pdb
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.genruntimeconfig.cache
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.csproj.AssemblyReference.cache
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Peliculas\EditarPelicula.cshtml.g.cs
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Peliculas\NuevaPelicula.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.csproj.AssemblyReference.cache
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Rotativa.AspNetCore.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Usuarios\Reporte.cshtml.g.cs
