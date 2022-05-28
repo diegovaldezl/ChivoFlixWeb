@@ -1,0 +1,67 @@
+﻿@model ChivoFlixWeb.Models.ViewModels.UsuarioVM
+@{
+    Layout = null;
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChivoFlixWeb</title>
+    <link rel="stylesheet" href="~/css/login.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="~/sweetalert/sweetalert2.css" rel="stylesheet" />
+    <script src="~/sweetalert/sweetalert2.js"></script>
+</head>
+<body class="hold-transition login-page">
+    <div class="suscripcion">
+        <img class="logo" src="~/img/chivoflix.png" height="90" width="250">
+        <h3>Adquirir una suscripción</h3>
+        @Html.Raw(TempData["notification"])
+        @using (Html.BeginForm("Suscripcion", "Account", FormMethod.Post))
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        @Html.TextBoxFor(d => d.Username, "", new { placeholder = "Usuario", @class = "inputBox" })
+                        @Html.ValidationMessageFor(d => d.Username, null, new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        @Html.TextBoxFor(d => d.Email, "", new { placeholder = "Correo Electronico", @class = "inputBox" })
+                        @Html.ValidationMessageFor(d => d.Email, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        @Html.DropDownListFor(d => d.IdPlanes, items, "Seleccione Plan", new { @class = "form-control bg-dark text-white" })
+                        @Html.ValidationMessageFor(d => d.IdPlanes, null, new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div>
+                        @Html.TextBoxFor(d => d.Password, "", new { placeholder = "Contraseña", @class = "inputBox" })
+                        @Html.ValidationMessageFor(d => d.Password, null, new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        @Html.TextBoxFor(d => d.ConfirmPassword, "", new { placeholder = "Repita Contraseña", @class = "inputBox" })
+                        @Html.ValidationMessageFor(d => d.ConfirmPassword, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <input value="Guardar" class="btn btn-primary" type="submit" />
+                    </div>
+                    <div class="col-md-6">
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-info text-center col-12">Regresar<br></a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

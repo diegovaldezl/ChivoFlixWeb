@@ -5,8 +5,9 @@
 
 <h2>Listado de Peliculas</h2>
 <div class="row right">
-    <a href="~/Peliculas/NuevaPelicula" class="btn btn-primary col-md-2 card-text-center">Nueva Pelicula</a>
+    <a href="~/Peliculas/NuevaPelicula" class="btn btn-primary col-md-2 text-center">Nueva Pelicula</a>
 </div>
+@Html.Raw(TempData["notification"])
 <br />
 <div class="row">
     <div class="col-md-12">
@@ -51,7 +52,9 @@
                     </tr>
                 }
             </tbody>
-
         </table>
+        <div class="row right">
+            <a asp-controller="Peliculas" asp-action="Reporte" class="btn btn-outline-dark inputBox col-md-2 card-text-center">Generar reporte</a>
+        </div>
     </div>
 </div>

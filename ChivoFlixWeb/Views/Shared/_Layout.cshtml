@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@*@{
+    if (Context.Session.GetString("username") == null)
+    {
+        Context.Response.Redirect("../Account/login");
+    }
+}*@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -27,7 +34,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" asp-controller="Peliculas" asp-action="Listado">Listado de peliculas</a>
-                            <a class="dropdown-item" asp-controller="Peliculas"  asp-action="NuevaPelicula">Agregar pelicula</a>
+                            <a class="dropdown-item" asp-controller="Peliculas" asp-action="NuevaPelicula">Agregar pelicula</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -50,6 +57,14 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" asp-controller="Mantenimientos" asp-action="Facturacion">Facturacion</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a class="nav-link text-uppercase text-white">@Context.Session.GetString("username")</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="@Url.Action("Logout","Account")" class="nav-link text-white btn btn-outline-danger">Cerrar Sesion</a>
                     </li>
                 </ul>
             </div>

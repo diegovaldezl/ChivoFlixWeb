@@ -27,11 +27,12 @@ namespace ChivoFlixWeb
 
             services.AddDbContext<CHIVOFLIXContext>(option => option.UseSqlServer(Configuration.GetConnectionString("SQLChivo")));
 
-            //services.AddDistributedMemoryCache();
-            //services.AddSession(options =>
-            //{
-            //    options.IdleTimeout = TimeSpan.FromMinutes(5);
-            //});
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+            });
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,11 +51,12 @@ namespace ChivoFlixWeb
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSession();
             app.UseRouting();
 
-            //app.UseAuthentication();
+            app.UseAuthentication();
 
-            //app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
@@ -63,6 +65,7 @@ namespace ChivoFlixWeb
                     pattern: "{controller=Account}/{action=Login}/{id?}");
                 endpoints.MapRazorPages();
             });
+            Rotativa.AspNetCore.RotativaConfiguration.Setup(env.WebRootPath, "../Reportes");
         }
     }
 }

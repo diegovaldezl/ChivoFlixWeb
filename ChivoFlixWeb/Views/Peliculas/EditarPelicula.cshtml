@@ -5,7 +5,7 @@
 }
 
 <h2>Nueva Pelicula</h2>
-
+@Html.Raw(TempData["notification"])
 @using (Html.BeginForm("EditarPelicula", "Peliculas", FormMethod.Post))
 {
     <div class="row">

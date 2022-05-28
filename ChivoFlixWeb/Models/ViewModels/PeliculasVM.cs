@@ -22,6 +22,8 @@ namespace ChivoFlixWeb.Models.ViewModels
         [Display(Name = "Año de estreno")]
         public int anioEstreno { get; set; }
 
+        [Required(ErrorMessage = "La categoria es requerida!")]
+        [Display(Name = "Ingrese la categoria")]
         public string categoriaEdad { get; set; }
 
         [Required(ErrorMessage = "La descripción es requerida!")]
@@ -29,6 +31,8 @@ namespace ChivoFlixWeb.Models.ViewModels
         [Display(Name = "Ingrese la descripción")]
         public string descripcion { get; set; }
 
+        [Required(ErrorMessage = "La calidad es requerida!")]
+        [Display(Name = "Ingrese la calidad")]
         public string calidad { get; set; }
 
         [Required(ErrorMessage = "El director es requerido!")]
@@ -36,8 +40,12 @@ namespace ChivoFlixWeb.Models.ViewModels
         [Display(Name = "Ingrese el director")]
         public string director { get; set; }
 
+        [Required(ErrorMessage = "El banner es requerido!")]
+        [Display(Name = "Ingrese el banner")]
         public string banner { get; set; }
 
+        [Required(ErrorMessage = "El genero es requerido!")]
+        [Display(Name = "Seleccione un genero")]
         public int idGeneros { get; set; }
 
         [Required(ErrorMessage = "Ellink es requerido!")]
