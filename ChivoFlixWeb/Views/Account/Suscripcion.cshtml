@@ -4,39 +4,56 @@
     List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
 }
 
-<h2>Suscribirse</h2>
 
-@using (Html.BeginForm("Suscripcion", "Account", FormMethod.Post))
-{
-    <div class="row">
-        <div class="col-md-12">
-            <div>
-                @Html.LabelFor(d => d.Username)
-                @Html.TextBoxFor(d => d.Username, "", new { @class = "form-control" })
-                @Html.ValidationMessageFor(d => d.Username, null, new { @class = "text-danger" })
-            </div>
-            <div>
-                @Html.LabelFor(d => d.Email)
-                @Html.TextBoxFor(d => d.Email, "", new { @class = "form-control" })
-                @Html.ValidationMessageFor(d => d.Email, null, new { @class = "text-danger" })
-            </div>
-            <div>
-                @Html.DropDownListFor(d => d.IdPlanes, items, "Seleccione...", new { @class = "form-control" })
-                @Html.ValidationMessageFor(d => d.IdPlanes, null, new { @class = "text-danger" })
-            </div>
-            <div>
-                @Html.LabelFor(d => d.Password)
-                @Html.TextBoxFor(d => d.Password, "", new { @class = "form-control" })
-                @Html.ValidationMessageFor(d => d.Password, null, new { @class = "text-danger" })
-            </div>
-            <div>
-                @Html.LabelFor(d => d.ConfirmPassword)
-                @Html.TextBoxFor(d => d.ConfirmPassword, "", new { @class = "form-control" })
-                @Html.ValidationMessageFor(d => d.ConfirmPassword, null, new { @class = "text-danger" })
-            </div>
-            <div>
-                <input value="Guardar" class="btn btn-primary" type="submit" />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChivoFlixWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body style="width:40%;margin:auto;background-color:black">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark"></nav>
+    <h2>Suscribirse</h2>
+    @Html.Raw(TempData["notification"])
+    @using (Html.BeginForm("Suscripcion", "Account", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    @Html.LabelFor(d => d.Username)
+                    @Html.TextBoxFor(d => d.Username, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.Username, null, new { @class = "text-danger" })
+                </div>
+                <div>
+                    @Html.LabelFor(d => d.Email)
+                    @Html.TextBoxFor(d => d.Email, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.Email, null, new { @class = "text-danger" })
+                </div>
+                <div>
+                    @Html.LabelFor(d => d.IdPlanes)
+                    @Html.DropDownListFor(d => d.IdPlanes, items, "Seleccione...", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.IdPlanes, null, new { @class = "text-danger" })
+                </div>
+                <div>
+                    @Html.LabelFor(d => d.Password)
+                    @Html.TextBoxFor(d => d.Password, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.Password, null, new { @class = "text-danger" })
+                </div>
+                <div>
+                    @Html.LabelFor(d => d.ConfirmPassword)
+                    @Html.TextBoxFor(d => d.ConfirmPassword, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.ConfirmPassword, null, new { @class = "text-danger" })
+                </div>
+                <div>
+                    <input value="Guardar" class="btn btn-primary" type="submit" />
+                </div>
             </div>
         </div>
-    </div>
-}
+    }
+</body>
+</html>

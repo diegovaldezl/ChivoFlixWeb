@@ -41,6 +41,7 @@ namespace ChivoFlixWeb.Controllers
 
         public IActionResult Suscripcion()
         {
+
             var listadoPlanes = (from planes in _contex.Planes join duracion in _contex.DuracionPlanes
                              on planes.IdDuracionPlanes equals duracion.IdDuracionPlanes
                              select new PlanesDuracionVM
@@ -53,17 +54,17 @@ namespace ChivoFlixWeb.Controllers
 
                              }).ToList();
 
-            List<SelectListItem> itemss = listadoPlanes.ConvertAll(planes =>
+            List<SelectListItem> items = listadoPlanes.ConvertAll(planes =>
             {
                 return new SelectListItem()
                 {
-                    Text = planes.Nombre.ToString(),
+                    Text = planes.Plann,
                     Value = planes.IdPlanes.ToString(),
                     Selected = false,
                 };
             });
 
-            ViewBag.items = itemss;
+            ViewBag.items = items;
             return View();
         }
 
@@ -73,28 +74,28 @@ namespace ChivoFlixWeb.Controllers
             var db = _contex;
             try
             {
-                if (ModelState.IsValid)
-                {
+
+                
                     var oUsuario = new Usuarios
                     {
                         Username = model.Username,
                         Email = model.Email,
                         Password = model.Password,
-                        Imagen = model.Imagen,
-                        IdRol = 0,
+                        Imagen = "",
+                        IdRol = 2,
                         IdPlanes = model.IdPlanes,
                         Perfiles = 4,
                     };
+                    
                     db.Usuarios.Add(oUsuario);
                     db.SaveChanges();
-                    return Redirect("~/Account/Login/");
-                }
-                return View(model);
+                
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                
             }
+            return View("Login");
         }
     }
 }
