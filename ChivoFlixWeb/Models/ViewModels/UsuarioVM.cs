@@ -42,7 +42,6 @@ namespace ChivoFlixWeb.Models.ViewModels
         [Display(Name = "Perfil")]
         public int? Perfiles { get; set; }
 
-        [Required(ErrorMessage = "Ingrese una direccion valida!")]
         [Display(Name = "Imagen")]
         public string Imagen { get; set; }
 

@@ -24,7 +24,7 @@ namespace ChivoFlixWeb.Controllers
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
-            if(_contex.Usuarios.Where(x=>x.Username == username && x.Password == password && x.IdRol == 1).Any())
+            if (_contex.Usuarios.Where(x => x.Username == username && x.Password == password && x.IdRol == 1).Any())
             {
                 HttpContext.Session.SetString("username", username);
                 return RedirectToAction("Index", "Home");
@@ -48,6 +48,23 @@ namespace ChivoFlixWeb.Controllers
         [HttpPost]
         public IActionResult Suscripcion(UsuarioVM model)
         {
+            string plan;
+            double valor;
+            switch (model.IdPlanes)
+            {
+                case 1:
+                    plan = "Basico";
+                    valor = 3.99;
+                    break;
+                case 2:
+                    plan = "Medium";
+                    valor = 4.99;
+                    break;
+                default:
+                    plan = "Avanzado";
+                    valor = 5.99;
+                    break;
+            }
             var db = _contex;
             try
             {
@@ -61,15 +78,38 @@ namespace ChivoFlixWeb.Controllers
                         Imagen = "img/usuario.jpg",
                         IdRol = 2,
                         IdPlanes = model.IdPlanes,
-                        Perfiles = 4,
+                        Perfiles = 4
                     };
                     db.Usuarios.Add(oUsuario);
+
+                    var oFact = new Facturaciones
+                    {
+                        IdUsuarios = model.IdUsuarios + 1,
+                        IdPlanes = model.IdPlanes,
+                        FechaAdquirido = DateTime.Now,
+                        Tipo = "Peliculas",
+                        Plann = plan,
+                        Precio = valor,
+                        Total = valor,
+                        IdUsuariosNavigation = new Usuarios
+                        {
+                            Email = model.Email,
+                            Username = model.Username,
+                            Password = model.Password,
+                            IdPlanes = model.IdPlanes 
+                        }
+                    };
+                    db.Facturaciones.Add(oFact);
                     db.SaveChanges();
                     TempData["notification"] = "<script language='javascript'>Swal.fire({icon: 'success',title: 'Agregado',text: 'Suscripcion Realizada!',})</script>";
+                    GetViewModel();
                     return View();
                 }
-                GetViewModel();
-                return View(model);
+                else
+                {
+                    GetViewModel();
+                    return View(model);
+                }
             }
             catch (Exception ex)
             {

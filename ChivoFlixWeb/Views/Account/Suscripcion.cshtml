@@ -43,11 +43,11 @@
                     </div>
                     <br />
                     <div>
-                        @Html.TextBoxFor(d => d.Password, "", new { placeholder = "Contraseña", @class = "inputBox" })
+                        @Html.TextBoxFor(d => d.Password, "", new { placeholder = "Contraseña", @class = "inputBox", @type = "password" })
                         @Html.ValidationMessageFor(d => d.Password, null, new { @class = "text-danger" })
                     </div>
                     <div>
-                        @Html.TextBoxFor(d => d.ConfirmPassword, "", new { placeholder = "Repita Contraseña", @class = "inputBox" })
+                        @Html.TextBoxFor(d => d.ConfirmPassword, "", new { placeholder = "Repita Contraseña", @class = "inputBox", @type = "password" })
                         @Html.ValidationMessageFor(d => d.ConfirmPassword, null, new { @class = "text-danger" })
                     </div>
                 </div>

@@ -560,3 +560,10 @@ C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Sys
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.WebPages.dll
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Account\Suscripcion.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Categorias\EditarCategoria.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Categorias\Index.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Categorias\Listado.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Categorias\NuevaCategoria.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Facturaciones\Details.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Facturaciones\Index.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Facturaciones\Reporte.cshtml.g.cs
