@@ -1,0 +1,35 @@
+﻿@model ChivoFlixWeb.Models.ViewModels.GenerosVM
+@{
+    ViewBag.Title = "Editar Categoria";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+}
+
+<h2>Editar Categoria</h2>
+
+@using (Html.BeginForm("EditarCategoria", "Categorias", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                @Html.LabelFor(d => d.IdGeneros)
+                @Html.TextBoxFor(d => d.IdGeneros, "", new { @class = "form-control", @readonly = "readonly" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Nombre)
+                @Html.TextBoxFor(d => d.Nombre, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Nombre, null, new { @class = "text-danger" })
+            </div>
+           
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                    <input value="Guardar" class="btn btn-primary" type="submit" />
+
+                    <a href="/Peliculas/Listado" class="btn btn-success">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
