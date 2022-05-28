@@ -551,3 +551,4 @@ C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Mic
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Rotativa.AspNetCore.dll
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Usuarios\Reporte.cshtml.g.cs
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Peliculas\Reporte.cshtml.g.cs
