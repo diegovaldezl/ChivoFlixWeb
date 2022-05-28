@@ -3,6 +3,7 @@ using ChivoFlixWeb.Models.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Rotativa.AspNetCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,32 +14,39 @@ namespace ChivoFlixWeb.Controllers
     
     public class UsuariosController : Controller
     {
-        private readonly CHIVOFLIXContext contexto;
+        private readonly CHIVOFLIXContext _contexto;
 
         public UsuariosController(CHIVOFLIXContext context)
         {
-            contexto = context;
+            _contexto = context;
         }
         public IActionResult Listado()
         {
-           // HttpContext.Session.GetString("String");
+            // HttpContext.Session.GetString("String");
 
-            List<Usuarios> listUsuarios;
-            listUsuarios = (from u in contexto.Usuarios
-                            select new Usuarios
-                            {
-                                IdUsuarios = u.IdUsuarios,
-                                Username = u.Username,
-                                Email = u.Email,
-                                Password = u.Password,
-                                Perfiles = u.Perfiles,
-                                Imagen = u.Imagen,
-                                IdPlanes = u.IdPlanes,
-                                IdRol = u.IdRol
-                            }).ToList();
+            List<Usuarios> listUsuarios = GetUsuarios();
             return View(listUsuarios);
         }
-        
+
+        private List<Usuarios> GetUsuarios()
+        {
+            return (from u in _contexto.Usuarios
+                    select new Usuarios
+                    {
+                        IdUsuarios = u.IdUsuarios,
+                        Username = u.Username,
+                        Email = u.Email,
+                        Password = u.Password,
+                        Perfiles = u.Perfiles,
+                        Imagen = u.Imagen,
+                        IdPlanes = u.IdPlanes,
+                        IdRol = u.IdRol,
+                        IdPlanesNavigation = u.IdPlanesNavigation,
+                        Planes = u.Planes,
+                        IdRolNavigation = u.IdRolNavigation
+                    }).ToList();
+        }
+
         public IActionResult NuevoUsuario()
         {
             return View();
@@ -47,7 +55,7 @@ namespace ChivoFlixWeb.Controllers
         [HttpPost]
         public IActionResult NuevoUsuario(UsuarioVM model)
         {
-            var db = contexto;
+            var db = _contexto;
             try
             {
                 if (ModelState.IsValid)
@@ -77,7 +85,7 @@ namespace ChivoFlixWeb.Controllers
         public IActionResult EditarUsuario(int id)
         {
             UsuarioVM model = new();
-            var oUsuario = contexto.Usuarios.Find(id);
+            var oUsuario = _contexto.Usuarios.Find(id);
             model.IdUsuarios = oUsuario.IdUsuarios;
             model.Username = oUsuario.Username;
             model.Email = oUsuario.Email;
@@ -90,7 +98,7 @@ namespace ChivoFlixWeb.Controllers
         [HttpPost]
         public IActionResult EditarUsuario(UsuarioVM model)
         {
-            var db = contexto;
+            var db = _contexto;
             try
             {
                 if (ModelState.IsValid)
@@ -120,7 +128,7 @@ namespace ChivoFlixWeb.Controllers
         [HttpGet]
         public IActionResult EliminarUsuario(int id)
         {
-            var db = contexto;
+            var db = _contexto;
             using (db)
             {
                 var oUsuario = db.Usuarios.Find(id);
@@ -132,7 +140,7 @@ namespace ChivoFlixWeb.Controllers
         [HttpGet]
         public IActionResult VerUsuario(int id)
         {
-            var db = contexto;
+            var db = _contexto;
             UsuarioVM model = new();
             using (db)
             {
@@ -144,6 +152,14 @@ namespace ChivoFlixWeb.Controllers
                 model.Imagen = oUsuario.Imagen;
             }
             return View(model);
+        }
+
+        public IActionResult Reporte()
+        {
+            return new ViewAsPdf("Reporte", GetUsuarios())
+            {
+
+            };
         }
     }
 }
