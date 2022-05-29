@@ -29,7 +29,7 @@ namespace ChivoFlixWeb.Controllers
                 HttpContext.Session.SetString("username", username);
                 return RedirectToAction("Index", "Home");
             }
-            TempData["notification"] = "<script language='javascript'>Swal.fire({icon: 'warning',title: 'Error',text: 'Credenciales incorrectas!',})</script>";
+            TempData["notification"] = "<script language='javascript'>Swal.fire({icon: 'error',title: 'Error',text: 'Credenciales incorrectas o no tiene acceso!',})</script>";
             return View();
         }
         public IActionResult Logout()

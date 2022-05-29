@@ -22,7 +22,7 @@ namespace ChivoFlixWeb.Controllers
         }
         public IActionResult Listado()
         {
-            // HttpContext.Session.GetString("String");
+            HttpContext.Session.GetString("String");
 
             List<Usuarios> listUsuarios = GetUsuarios();
             return View(listUsuarios);
@@ -44,7 +44,7 @@ namespace ChivoFlixWeb.Controllers
                         IdPlanesNavigation = u.IdPlanesNavigation,
                         Planes = u.Planes,
                         IdRolNavigation = u.IdRolNavigation
-                    }).ToList();
+                    }).Where(x => x.IdRol == 2).ToList();
         }
 
         public IActionResult NuevoUsuario()
