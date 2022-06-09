@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ChivoFlixWeb.Models.Facturaciones>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Facturaciones</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Plann)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaAdquirido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdUsuariosNavigation.Email)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Plann)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaAdquirido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdUsuariosNavigation.Email)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="row right">
+    <a asp-controller="Facturaciones" asp-action="Reporte" class="btn btn-outline-dark inputBox col-md-2 card-text-center">Generar reporte</a>
+</div>

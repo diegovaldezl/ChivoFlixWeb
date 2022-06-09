@@ -1,0 +1,331 @@
+USE [CHIVOFLIX]
+GO
+
+INSERT INTO [dbo].[duracionPlanes]
+           (nombre)
+     VALUES
+           ('1 Mes');
+GO
+INSERT INTO [dbo].[duracionPlanes]
+           (nombre)
+     VALUES
+           ('3 Meses');
+GO
+INSERT INTO [dbo].[duracionPlanes]
+           (nombre)
+     VALUES
+           ('6 Meses');
+GO
+
+
+
+
+
+INSERT INTO [dbo].[generos]
+           (nombre)
+     VALUES
+           ('Accion');
+GO
+INSERT INTO [dbo].[generos]
+           (nombre)
+     VALUES
+           ('Drama');
+GO
+INSERT INTO [dbo].[generos]
+           (nombre)
+     VALUES
+           ('Suspenso');
+GO
+INSERT INTO [dbo].[generos]
+           (nombre)
+     VALUES
+           ('Ciencia Ficcion');
+GO
+INSERT INTO [dbo].[generos]
+           (nombre)
+     VALUES
+           ('Terror');
+GO
+INSERT INTO [dbo].[generos]
+           (nombre)
+     VALUES
+           ('Aventuras');
+GO
+INSERT INTO [dbo].[generos]
+           (nombre)
+     VALUES
+           ('Comedia');
+GO
+INSERT INTO [dbo].[generos]
+           (nombre)
+     VALUES
+           ('Fantasia');
+GO
+
+
+INSERT INTO [dbo].[peliculas]
+           ([nombre]
+           ,[anioEstreno]
+           ,[categoriaEdad]
+           ,[descripcion]
+           ,[calidad]
+           ,[director]
+           ,[banner]
+           ,[idGeneros])
+     VALUES
+           ('Spiderman: No Way Home'
+           ,2020
+           ,'TP'
+           ,'Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida...'
+           ,'FHD+'
+           ,'Jon Watts'
+           ,'img/banners/spidermanNWH.jpg'
+           ,1)
+GO
+
+INSERT INTO [dbo].[peliculas]
+           ([nombre]
+           ,[anioEstreno]
+           ,[categoriaEdad]
+           ,[descripcion]
+           ,[calidad]
+           ,[director]
+           ,[banner]
+           ,[idGeneros])
+     VALUES
+           ('Paul'
+           ,2011
+           ,'16+'
+           ,'Cuando Paul decide que ha tenido suficiente de la Tierra, escapa y se sube a una casa rodante manejada por dos nerds británicos amantes de la ciencia ficción llamados Graeme y Clive...'
+           ,'FHD+'
+           ,'Greg Mottola'
+           ,'img/banners/paul.jpg'
+           ,7)
+GO
+
+INSERT INTO [dbo].[peliculas]
+           ([nombre]
+           ,[anioEstreno]
+           ,[categoriaEdad]
+           ,[descripcion]
+           ,[calidad]
+           ,[director]
+           ,[banner]
+           ,[idGeneros])
+     VALUES
+           ('Hombres de negro'
+           ,1997
+           ,'12+'
+           ,'Los Hombres de Negro son agentes especiales que forman parte de una unidad altamente secreta del gobierno; su misión consiste en controlar a los alienígenas....'
+           ,'FHD+'
+           ,'Barry Sonnenfeld'
+           ,'img/banners/hombresnegros.jpg'
+           ,7)
+GO
+
+INSERT INTO [dbo].[peliculas]
+           ([nombre]
+           ,[anioEstreno]
+           ,[categoriaEdad]
+           ,[descripcion]
+           ,[calidad]
+           ,[director]
+           ,[banner]
+           ,[idGeneros])
+     VALUES
+           ('La Familia Mitchell vs. Las Máquinas'
+           ,2021
+           ,'TP'
+           ,'El viaje por carretera de la familia Mitchell, que va a acompañar a uno de sus hijos a su primer día de universidad, se ve interrumpido por una insurrección tecnológica que amenaza a la humanidad...'
+           ,'FHD+'
+           ,'Michael Rianda'
+           ,'img/banners/mitchells.jpg'
+           ,7)
+GO
+
+
+
+INSERT INTO [dbo].[roles]
+           ([rol])
+     VALUES
+           (1)
+GO
+INSERT INTO [dbo].[roles]
+           ([rol])
+     VALUES
+           (2)
+GO
+
+
+
+
+
+INSERT INTO [dbo].[usuarios]
+           ([username]
+           ,[email]
+           ,[password]
+           ,[perfiles]
+           ,[imagen]
+           ,[idRol])
+     VALUES
+           ('felix'
+           ,'felix@mail.com'
+           ,'1234f0'
+           ,2
+           ,'img/periles/felix.jpg'
+           ,1)
+GO
+INSERT INTO [dbo].[usuarios]
+           ([username]
+           ,[email]
+           ,[password]
+           ,[perfiles]
+           ,[imagen]
+           ,[idRol])
+     VALUES
+           ('david1'
+           ,'david1@mail.com'
+           ,'1234d1'
+           ,3
+           ,'img/periles/david1.jpg'
+           ,1)
+GO
+INSERT INTO [dbo].[usuarios]
+           ([username]
+           ,[email]
+           ,[password]
+           ,[perfiles]
+           ,[imagen]
+           ,[idRol])
+     VALUES
+           ('david2'
+           ,'david2@mail.com'
+           ,'1234d2'
+           ,2
+           ,'img/periles/david2.jpg'
+           ,1)
+GO
+INSERT INTO [dbo].[usuarios]
+           ([username]
+           ,[email]
+           ,[password]
+           ,[perfiles]
+           ,[imagen]
+           ,[idRol])
+     VALUES
+           ('daniel'
+           ,'daniel@mail.com'
+           ,'1234d3'
+           ,2
+           ,'img/periles/daniel.jpg'
+           ,1)
+GO
+
+INSERT INTO [dbo].[usuarios]
+           ([username]
+           ,[email]
+           ,[password]
+           ,[perfiles]
+           ,[imagen]
+           ,[idRol])
+     VALUES
+           ('diego'
+           ,'godiegogo@mail.com'
+           ,'1234d4'
+           ,2
+           ,'img/periles/diego.jpg'
+           ,1)
+GO
+
+
+INSERT INTO [dbo].[planes]
+           ([plann]
+           ,[precioPlan]
+           ,[idDuracionPlanes]
+           ,[idUsuarios])
+     VALUES
+           ('Basico'
+           ,3.99
+           ,3
+           ,2)
+GO
+
+INSERT INTO [dbo].[planes]
+           ([plann]
+           ,[precioPlan]
+           ,[idDuracionPlanes]
+           ,[idUsuarios])
+     VALUES
+           ('Medio'
+           ,4.99
+           ,3
+           ,2)
+GO
+
+INSERT INTO [dbo].[planes]
+           ([plann]
+           ,[precioPlan]
+           ,[idDuracionPlanes]
+           ,[idUsuarios])
+     VALUES
+           ('Avanzado'
+           ,5.99
+           ,3
+           ,2)
+GO
+
+
+
+
+INSERT INTO [dbo].[facturaciones]
+           ([idUsuarios]
+           ,[idPlanes]
+           ,[plann]
+           ,[fechaAdquirido]
+           ,[tipo]
+           ,[precio]
+           ,[total])
+     VALUES
+           (2
+           ,1
+           ,'Basico'
+           ,2022-04-21
+           ,'Peliculas'
+           ,3.99
+           ,3.99)
+GO
+
+INSERT INTO [dbo].[facturaciones]
+           ([idUsuarios]
+           ,[idPlanes]
+           ,[plann]
+           ,[fechaAdquirido]
+           ,[tipo]
+           ,[precio]
+           ,[total])
+     VALUES
+           (3
+           ,1
+           ,'Medium'
+           ,2022-04-21
+           ,'Peliculas'
+           ,4.99
+           ,4.99)
+GO
+INSERT INTO [dbo].[facturaciones]
+           ([idUsuarios]
+           ,[idPlanes]
+           ,[plann]
+           ,[fechaAdquirido]
+           ,[tipo]
+           ,[precio]
+           ,[total])
+     VALUES
+           (2
+           ,1
+           ,'Basico'
+           ,2022-05-21
+           ,'Peliculas'
+           ,3.99
+           ,3.99)
+GO

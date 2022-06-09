@@ -34,8 +34,8 @@
                             <td>@item.Username</td>
                             <td>@item.Email</td>
                             <td>@item.Perfiles</td>
-                            <td>@item.IdRol</td>
-                            <td>@item.IdPlanes</td>
+                            <td>@item.IdRolNavigation.Rol</td>
+                            <td>@item.IdPlanesNavigation.Plann</td>
                             <td>
                                 <a href="~/Usuarios/VerUsuario/@item.IdUsuarios" class="btn btn-success"><i class="bi bi-eye"></i></a>
                             </td>
@@ -55,7 +55,9 @@
                     </tr>
                 }
             </tbody>
-
         </table>
+        <div class="row right">
+            <a asp-controller="Usuarios" asp-action="Reporte" class="btn btn-outline-dark inputBox col-md-2 card-text-center">Generar reporte</a>
+        </div>
     </div>
 </div>
