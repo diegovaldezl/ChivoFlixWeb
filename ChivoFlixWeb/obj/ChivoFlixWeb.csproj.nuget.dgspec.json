@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {}
+    "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {}
   },
   "projects": {
-    "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {
+    "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
         "projectName": "ChivoFlixWeb",
-        "projectPath": "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
-        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "E:\\Repositorio\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
+        "projectPath": "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\ChivoFlixWeb.csproj",
+        "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Diego\\Documents\\gitRepos\\ChivoFlixWeb\\ChivoFlixWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -541,7 +541,6 @@ C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Chi
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ref\ChivoFlixWeb.dll
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.pdb
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.genruntimeconfig.cache
-C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\ChivoFlixWeb.csproj.AssemblyReference.cache
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Peliculas\EditarPelicula.cshtml.g.cs
 C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Peliculas\NuevaPelicula.cshtml.g.cs
 E:\Repositorio\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\appsettings.Development.json
@@ -726,3 +725,11 @@ E:\Repositorio\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.WebPages.De
 E:\Repositorio\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
 E:\Repositorio\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.WebPages.dll
 E:\Repositorio\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.Mvc.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.Razor.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.Helpers.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\System.Web.WebPages.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Diego\Documents\gitRepos\ChivoFlixWeb\ChivoFlixWeb\obj\Debug\net5.0\Razor\Views\Account\Suscripcion.cshtml.g.cs
